@@ -1,0 +1,99 @@
+/* 
+let obj={
+    "sub_1":"welcome_1",
+    "sub_2":"welcome_2",
+    "sub_3":"welcome_3"
+};
+console.log(
+    obj.sub_1,
+    obj.sub_2,
+    obj.sub_3                                   //welcome_1 welcome_2 welcome_3
+
+);
+ */
+
+/* let obj = {
+    "sub_one" : "ReactJS",
+    sub_two : "NodeJS",
+    100 : 100
+};
+for(let i in obj){
+
+    //console.log(i,typeof i,obj[i]);                          //sub_one string ReactJS sub_two string NodeJS sub_three string MongoDB
+    console.log( obj.sub_one );                                //ReactJS
+    console.log( obj["sub_one"] );                            //ReactJS
+    console.log( obj[100] );                                  //100
+   }   */                                
+/*    let arr = ["Hello_1"];
+   for(let x of arr){
+       console.log(x);                                      //Hello_1
+   } */
+
+   /* let obj1 = {"key1":"value1"};
+    let obj2 = {...obj1};
+    obj1.key2 = "value2";
+    obj2.key3 = "value3";
+    console.log( obj1 );                                    //{ key1: 'value1', key2: 'value2' } 
+    console.log( obj2 );  */                                   //{ key1: 'value1', key3: 'value3' }  
+
+    /* let obj = {
+        "key1" : "Hello_1",
+        "key2" : "Hello_2",
+        "key3" : "Hello_3"
+    };
+    console.log(Object.keys(obj));                                  //[ 'key1', 'key2', 'key3' ]
+    console.log(Object.values(obj));    */                             //[ 'Hello_1', 'Hello_2', 'Hello_3' ]
+
+   /*  let obj1 = [{"key1":"Hello_1"}];
+    let obj2 = [{"key2":"Hello_2"}];
+    let obj3 = [{"key3":"Hello_3"}];
+
+    let obj4={...obj1,...obj2,...obj3};                                //{ key1: 'Hello_1', key2: 'Hello_2', key3: 'Hello_3' }
+    let obj4=obj1.concat(obj2,obj3);                                   //[ { key1: 'Hello_1' }, { key2: 'Hello_2' }, { key3: 'Hello_3' } ]
+    console.log(obj4);                                                 */
+
+
+ /*    let obj1 = {"key1":"hello_1","key2":"hello_2","key3":"hello_3"};
+    delete obj1.key3;                                                   //{ key1: 'hello_1', key2: 'hello_2' }
+    obj1.key2="welcome";                                                //{ key1: 'hello_1', key2: 'welcome' }
+    console.log(obj1); */
+<script>
+let arr=[
+        {"p_id":111,"p_name":"p_one","p_cost":1000},
+        {"p_id":222,"p_name":"p_two","p_cost":2000},
+        {"p_id":333,"p_name":"p_three","p_cost":3000},
+        {"p_id":444,"p_name":"p_four","p_cost":4000},
+        {"p_id":555,"p_name":"p_five","p_cost":5000}];
+
+        document.write(`<table>
+            <tr>
+                <th>sr.no</th>    
+                <th>id</th>  
+                <th>name</th>  
+                <th>cost</th>  
+            </tr>`);
+            arr.forEach((element,index)=>{
+                document.write(`<tr>
+                    <td>${index+1}</td>
+                    <td>${element.p_id}</td>
+                    <td>${element.p_name}</td>
+                    <td>${element.p_cost}</td> 
+                    </tr>`);
+            });
+         document.write(`</table>`);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

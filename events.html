@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <style>
+            #grandparent{
+                border: 2px solid red;
+                width: 200px;
+                height: 200px;
+                margin: 50px auto;
+                text-align: center;
+            }
+            #parent{
+                border: 2px solid red;
+                width: 150px;
+                height: 150px;
+                margin-left: 25px;
+            }
+            #child{
+                border: 2px solid red;
+                width: 100px;
+                height: 100px;
+                margin-left: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="grandparent">Grandparent
+        <div id="parent">Parent
+        <div id="child">Child</div></div></div>
+    </body>
+
+    <!-- EVENT BUBBLING -->
+
+    <!-- <script>
+        let grandparent=document.getElementById("grandparent");
+        let parent=document.getElementById("parent");
+        let child=document.getElementById("child");
+
+        grandparent.addEventListener("click",()=>{
+            console.log("Grand parent");
+        });
+        parent.addEventListener("click",()=>{
+            console.log("parent");
+        });
+        child.addEventListener("click",(event)=>{
+            event.stopPropagation();
+
+            console.log("child");
+        });
+
+    </script> -->
+
+    <!-- EVENT CAPTURING -->
+
+    <script>
+        let grandparent = document.querySelector("#grandparent");
+        let parent = document.querySelector("#parent");
+        let child = document.querySelector("#child");
+        grandparent.addEventListener("click",()=>{ console.log("grand parent") },true);
+        parent.addEventListener("click",()=>{ console.log("parent") },true);
+        child.addEventListener("click",()=>{ console.log("child") },true);
+    </script>
+    
+</html>

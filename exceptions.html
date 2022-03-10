@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exceptions</title>
+    </head>
+    <body>
+        <input type="text" id="demo" min="5" max="10">
+<button onclick="myFunction()">Click Me</button>
+<p id="my_paragraph"></p>
+
+</body>
+
+
+<script>
+    function myFunction(){
+        const message = document.getElementById("my_paragraph");
+        message.innerHTML = "";
+        try{
+            let x = document.getElementById("demo").value;
+           
+            if(x == "") throw {"name":"hello"};
+            if(isNaN(x)) throw "Not a Number";
+            x = Number(x);
+            
+            if(x<5) throw "less than 5 ";
+            if(x>10) throw "more than 10 ";
+           
+        }catch(err){
+            console.log(err);
+            message.innerHTML = err;
+        }finally{
+            message.innerHTML = "i am a final block";
+        }
+
+    }
+</script>
+
+
+
+</html>

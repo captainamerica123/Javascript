@@ -1,0 +1,61 @@
+<!-- <script>
+    function fun_one(param1){
+        console.log(param1());
+    };
+    fun_one(function fun_two(){
+        return "hello";                                 //hello
+    });
+</script> -->
+<!-- <script>
+    function myFun(param1,param2,param3){
+        console.log(param1(),param2(),param3());
+    }
+    myFun(function f1(){
+        return "Hello1";
+    },function f2(){
+        return "Hello2";
+    },function f3(){
+        return "Hello3";
+    });                                                 //Hello1 Hello2 Hello3
+</script> -->
+
+<!-- <script>
+    function fun_one(param1){
+        console.log(param1());
+    }
+    fun_one(()=>{
+        return "Hello";
+    });                                                 //Hello
+</script> -->
+
+<script>
+    function add(num,callback){
+        return callback(num+5,false);
+    }
+
+    function sub(num,callback){
+        return callback(num-3,false);
+    }
+
+    function mul(num,callback){
+        return callback(num*2,false);
+    }
+
+    add(5,(addRes,error)=>{
+        /* if(!error){
+            sub(addRes,(subRes,error)=>{
+                if(!error){
+                    mul(subRes,(mulRes,error)=>{
+                        if(!error){
+                            console.log(mulRes);
+                        }
+                    });
+                }
+            });
+        }   */
+        if(!error)
+        {
+            console.log(addRes);
+        }
+    });
+</script>

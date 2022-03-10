@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DoM</title>
+        <style>
+            body{
+                font-size: 20px;
+            }
+            button{
+                font-size: 20px;;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="uname">UserName</label><br>
+        <input type="text" id="uname"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="upwd"><br><br>
+        <button onclick="my_fun()">Login</button><br>
+        <p id="status"></p>
+        <p>para 1</p>
+        <p>para 2</p>
+        <div>div 1</div>
+        <div>div 2</div>
+        <button>click me</button>
+        </body>
+       
+        <script>
+            function my_fun()
+            {
+                if(document.getElementById("uname").value ==="bhushan" && document.getElementById("upwd").value==="1234")
+                {
+                    document.getElementById("status").innerHTML="success";
+                }
+                else{
+                    document.getElementById("status").innerHTML="fail";
+                }
+            }
+            document.getElementsByTagName("p")[0].innerHTML="hello_1";
+            document.getElementsByTagName("p")[1].innerHTML="hello_2";
+
+           //let p1= document.querySelector("p");
+           let p1= document.querySelectorAll("p");
+            for(let p of p1)
+            {
+                p.style.color="red";
+            }
+
+            let div1=document.querySelector("div");
+            div1.style.color="yellow";
+
+            let div2=document.querySelectorAll("div");
+            for(let d of div2)
+            {
+                d.style.color="red";
+            }
+           
+           
+        </script>
+</html>

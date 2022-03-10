@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<!--         <button>click me</button>
+
+ -->
+<div>
+    <strong>Welcome to element</strong>
+</div>
+
+
+
+
+</body>
+    <script>
+/* let btn=document.querySelector("button");
+btn.onclick=my_fun;
+function my_fun()
+{
+    console.log("clicked!");
+} */
+   /*  let btn=document.querySelector("button");
+    btn.addEventListener("click",my_fun);
+    function my_fun()
+    {
+        console.log("clicked!");
+    }
+    btn.removeEventListener("click",my_fun); */
+    /* let div=document.querySelector("div");
+
+    div.setAttribute("uname","hello");
+   console.log( div.getAttribute("uname"));
+   div.removeAttribute("uname"); */
+     /* let em=document.createElement("em");
+   let h1=document.createElement("h1");
+
+h1.textContent="data added dynamically";
+let div=document.querySelector("div");
+let strong=document.querySelector("strong");
+div.replaceChild(h1,strong); 
+
+em.textContent="Emphasized text";
+div.replaceChild(em,h1); 
+
+     let strong=document.querySelector("strong");
+    let strong1=strong.cloneNode(true);
+    let div=document.querySelector("div");
+    div.appendChild(strong1);  */
+
+    let p=document.createElement("p");
+    p.textContent="Paragraph contenets";
+    let div=document.querySelector("div");
+    let strong=document.querySelector("strong");
+
+    div.insertBefore(p,strong);
+
+
+    </script>
+</html>

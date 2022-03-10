@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>throtting</title>
+    </head>
+    <body>
+        <button id="my_btn">Click Me</button>
+    </body>
+    <script>
+        const throtting=(fn,delay)=>{
+            let last=0;
+            return function(...args){
+                let now=new Date().getTime();
+                if(now-last<delay)
+                {
+                    return;
+                }
+               
+                last=now;
+                return fn(...args);
+            }
+        };
+        document.getElementById("my_btn").addEventListener("click",throtting(e=>{
+            console.log("Click me");
+        },2000));
+    </script>
+</html>

@@ -1,0 +1,154 @@
+<!-- <script>
+    let key1={};
+    let value1="Hello1";
+
+    let key2={};
+    let value2="Hello2";
+
+    let obj={
+
+    };
+    obj[key1]=value1;
+    obj[key2]=value2;
+
+    console.log(obj);                                   //{[object Object]: 'Hello2'}
+
+</script> -->
+<!-- <script>
+    let map = new Map();
+    let key1 = {};
+    let value1 = "Hello_1";
+    let key2 = {};
+    let value2 = "Hello_2";
+    map.set(key1,value1).set(key2,value2);
+    console.dir(map);                                   //{Object => "Hello_1"}  {Object => "Hello_2"}
+</script> -->
+<!-- <script>
+    let map = new Map();
+    map.set("key1","Hello_1")
+       .set("key1","Hello_2");
+    console.log(map);                   //{'key1' => 'Hello_2'}
+</script> -->
+<!-- <script>
+    let map = new Map();
+    map.set("key1","Hello_2")
+       .set("key2","Hello_2");
+    console.log(map);                   //{'key1' => 'Hello_2', 'key2' => 'Hello_2'}
+</script> -->
+
+<!-- <script>
+    let map = new Map();
+    map.set("key1","Hello_1")
+       .set(100,200)
+       .set(true,false)
+       .set(undefined,undefined)
+       .set(null,null)
+       .set(100n,100n)
+       .set(Symbol(), Symbol(100));
+
+    let k1 = [];
+    let k2 = {};
+    map.set(k1,[]);
+    map.set(k2,{});
+       
+    console.log(map);                       //{'key1' => 'Hello_1', 100 => 200, true => false, undefined => undefined, null => null,{100n => 100n},{Array(0) => Array(0)},{Object => Object}}
+
+</script> -->
+
+<!-- <script>
+    let map=new Map();
+    map.set("key1","hello1");
+    map.set("key2","hello2");
+    map.set("key3","hello3");
+    map.set("key4","hello4");
+    map.set("key5","hello5");
+
+console.log(map.has("key1"));                                       //true
+console.log(map.get("key1"));                                       //hello1
+console.log(map.size);                                              //5
+map.delete("key1");
+console.log(map);
+console.log(map.has("key1"));                                       //false
+map.clear();
+console.log(map);
+console.log(map.size);                                              //0
+ map=new Map();
+    map.set("key1","hello1");
+    map.set("key2","hello2");
+    map.set("key3","hello3");
+    map.set("key4","hello4");
+    map.set("key5","hello5");
+
+for(let [k,v] of map)
+{
+    console.log(k,v);
+}
+
+</script> -->
+<!-- <script>
+    let weakMap=new WeakMap();
+    let key1={};
+    let value1="Hello1";
+
+    let key2={};
+    let value2="Hello2";
+
+    weakMap.set(key1,value1)
+            .set(key2,value2);
+
+    console.log(weakMap);
+</script> -->
+<!-- <script>
+let set=new Set();
+
+set.add(10).add(20).add(30).add(10).add(20);
+let data1="Hello_1";
+let data2="Hello_2";
+
+set.add(data1).add(data2);
+console.log(set);                                               //Set(3) {10, 20, 30}
+console.log([...set]);                                          //[10, 20, 30, 'Hello_1', 'Hello_2']
+console.log(set.keys());                                        //[10, 20, 30, 'Hello_1', 'Hello_2']
+console.log(set.values());                                      //[10, 20, 30, 'Hello_1', 'Hello_2']
+console.log(set.size);                                          //5
+
+for(let x of set)
+{
+    console.log(x);
+}
+
+set.clear();
+console.log(set);
+</script> -->
+
+<script>
+    let weakset=new WeakSet();
+
+    let key1={"key":"value1"};
+    let key2={"key":"value2"};
+
+    weakset.add(key1,key2);
+    console.log(weakset);
+    console.log(weakset.has(key1));                            //true
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
